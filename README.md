@@ -66,21 +66,11 @@ XGBoost was selected as the final model, achieving a validation MAE of roughly 2
 - No formal cross-validation was used during hyperparameter tuning — a single validation split was used for all parameter searches.
 - A simple baseline model (e.g. predicting the median) was not included for direct comparison.
 
-## Requirements
-
-```
-pandas
-matplotlib
-seaborn
-scikit-learn
-xgboost
-```
-
 ## How to Run
 
 ```bash
 git clone https://github.com/coretlwww/mortgage-prediction.git
 cd mortgage-prediction
 pip install -r requirements.txt
-jupyter notebook mortgage_project.ipynb
+jupyter notebook notebooks/01_eda.ipynb
 ```
