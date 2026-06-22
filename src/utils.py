@@ -67,7 +67,7 @@ def plot_param_vs_mae(model_class, param_name, params_list, X_tr, y_tr, X_v, y_v
         if "random_state" not in model_kwargs:
             model_kwargs["random_state"] = 0
             
-        # Instantiate model, run your existing pipeline function, and save the score
+        # Instantiate model, run the existing pipeline function, and save the score
         temp_model = model_class(**model_kwargs)
         mae = get_mae(temp_model, X_tr, y_tr, X_v, y_v, preprocessor)
         mae_scores.append(mae)
@@ -86,6 +86,6 @@ def plot_param_vs_mae(model_class, param_name, params_list, X_tr, y_tr, X_v, y_v
     
     plt.show()
     
-    # Return the best value programmatically just like your previous function did
+    # Return the best value
     best_mae_index = mae_scores.index(min(mae_scores))
     return sorted_params[best_mae_index]
